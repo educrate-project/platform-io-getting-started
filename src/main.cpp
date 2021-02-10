@@ -5,23 +5,30 @@
 const int chosenLEDPin = LED_BUILTIN;
 const int delayBetweenBlinksMs = 1000;
 
-void turnLEDOn(bool turnOn) {
-  if (turnOn) {
+void turnLEDOn(bool turnOn)
+{
+  if (turnOn)
+  {
     digitalWrite(chosenLEDPin, HIGH);
-  } else {
-  digitalWrite(chosenLEDPin, LOW);
+  }
+  else
+  {
+    digitalWrite(chosenLEDPin, LOW);
   }
 }
 
-void sleepOneSecond() {
+void sleepOneSecond()
+{
   delay(delayBetweenBlinksMs);
 }
 
-void setup() {
+void setup()
+{
   pinMode(chosenLEDPin, OUTPUT);
 }
 
-void loop() {
+void loop()
+{
   turnLEDOn(true);
   sleepOneSecond();
   turnLEDOn(false);
